@@ -1,0 +1,17 @@
+@use '../global';
+
+.container {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-size: global.$font-size-m;
+  margin-top: 10px;
+  text-align: center;
+  color: global.$text-primary-color;
+  background-color: global.$theme-bgcolor;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.content {
+  padding: 10px 20px;
+  text-align: left;
+}
