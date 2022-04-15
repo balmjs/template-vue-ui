@@ -81,12 +81,11 @@ axios.interceptors.response.use(
 const useHttp = () => axios;
 
 export default {
-  install(app) {
+  install(Vue) {
     axios.defaults.baseURL = API_ENDPOINT;
     // axios.defaults.withCredentials = true;
 
-    app.config.globalProperties.$http = axios;
-    app.provide('http', axios);
+    Vue.prototype.$http = axios;
   }
 };
 export { useHttp };

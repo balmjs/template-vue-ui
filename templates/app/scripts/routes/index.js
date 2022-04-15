@@ -1,10 +1,14 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import Vue from 'vue';
+import VueRouter from 'vue-router';
+import VueMeta from 'vue-meta';
 import { initRouter } from './middleware';
 import routes from './modules';
 
-const history = createWebHistory();
-const router = createRouter({
-  history,
+Vue.use(VueRouter);
+Vue.use(VueMeta);
+
+const router = new VueRouter({
+  mode: 'history',
   routes
 });
 

@@ -1,5 +1,5 @@
-import useDemoStore from './modules/demo';
+import demo from './modules/demo';
 
 export default {
-  ...useDemoStore()
+  mixins: [demo]
 };

@@ -6,3 +6,11 @@
     <p>An Universal Front-End Workflow</p>
   </div>
 </template>
+
+<script>
+export default {
+  metaInfo: {
+    titleTemplate: '%s - Home'
+  }
+};
+</script>

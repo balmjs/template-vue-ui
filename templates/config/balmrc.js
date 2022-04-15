@@ -49,7 +49,7 @@ module.exports = {
       })
     ],
     alias: {
-      vue$: 'vue/dist/vue.esm-bundler.js',
+      vue$: 'vue/dist/vue.esm.js',
       '@mock-server': resolve('mock-server'),
       '@': resolve(`${appRoot}/scripts`)
     }

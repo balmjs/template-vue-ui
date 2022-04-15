@@ -11,8 +11,6 @@
 </template>
 
 <script>
-import { computed } from 'vue';
-
 export default {
   name: 'MyMenu',
   props: {
@@ -27,12 +25,10 @@ export default {
       default: false
     }
   },
-  setup(props) {
-    const menu = computed(() => props.items);
-
-    return {
-      menu
-    };
+  computed: {
+    menu() {
+      return this.items;
+    }
   }
 };
 </script>

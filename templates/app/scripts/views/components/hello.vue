@@ -9,17 +9,11 @@
 </template>
 
 <script>
-import { ref } from 'vue';
-
 export default {
   name: 'Hello',
   data() {
-    const msg = ref('');
-
-    msg.value = 'Hello Vue 3.0 App';
-
     return {
-      msg
+      msg: 'Hello Vue App'
     };
   }
 };

@@ -1,31 +1,25 @@
-import { reactive, toRefs } from 'vue';
 import { useAlert } from 'balm-ui';
-import { useHttp } from '@/plugins/http';
 import { isDev } from '@/config';
 
 const $alert = useAlert();
-const $http = useHttp();
 
-const state = reactive({
-  demoMenu: []
-});
+export default {
+  data() {
+    return {
+      demoMenu: [] // shared data
+    };
+  },
+  methods: {
+    async getDemoMenu() {
+      let url = isDev ? '/mock/menu' : '/menu.json';
+      let response = await this.$http.get(url);
+      let { code, data, message } = response;
 
-async function getDemoMenu() {
-  const url = isDev ? '/mock/menu' : '/menu.json';
-  const { code, data, message } = await $http.get(url);
-
-  if (code === 200) {
-    state.demoMenu = data;
-  } else {
-    $alert(message);
+      if (code === 200) {
+        this.demoMenu = data;
+      } else {
+        $alert(message);
+      }
+    }
   }
-}
-
-const useDemoStore = () => {
-  return {
-    ...toRefs(state),
-    getDemoMenu
-  };
 };
-
-export default useDemoStore;

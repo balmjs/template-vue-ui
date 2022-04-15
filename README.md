@@ -1,6 +1,6 @@
 # BalmJS template - `vue-ui`
 
-> A Vue.js project with router & BalmUI
+> A Vue.js project with router & BalmUI (for vue2)
 
 ## Requirements
 
@@ -21,17 +21,9 @@ balm -V
 
 ## Installation
 
-- For vue3
-
-  ```sh
-  balm init vue-ui my-project
-  ```
-
-- For vue2
-
-  ```sh
-  balm init vue-ui#legacy my-project
-  ```
+```sh
+balm init vue-ui#legacy my-project
+```
 
 ```sh
 cd my-project
@@ -40,7 +32,7 @@ yarn
 npm i
 ```
 
-- (Recommended) [BalmUI](https://material.balmjs.com/) for your project
+- (Recommended) [BalmUI](https://v8.material.balmjs.com/) for your project
 
 ## Enjoy
 

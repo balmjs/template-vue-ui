@@ -2,7 +2,7 @@ import { shallowMount } from '@vue/test-utils';
 import Hello from '@/views/components/hello';
 
 describe('Hello BalmJS', () => {
-  const targetName = 'Hello Vue 3.0 App';
+  const targetName = 'Hello Vue App';
 
   it(`should be "${targetName}"`, () => {
     // Place your tests here.

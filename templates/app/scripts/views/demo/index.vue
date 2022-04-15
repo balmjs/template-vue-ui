@@ -6,24 +6,21 @@
 </template>
 
 <script>
-import { computed } from 'vue';
 import MyMenu from '@/views/components/my-menu';
-import { useStore } from 'balm-ui';
 
 export default {
+  metaInfo: {
+    titleTemplate: '%s - UI'
+  },
   components: {
     MyMenu
   },
-  setup() {
-    const store = useStore();
-
-    const menu = computed(() => {
-      return store.demoMenu.length ? store.demoMenu[1].children : [];
-    });
-
-    return {
-      menu
-    };
+  computed: {
+    menu() {
+      return this.$store.demoMenu.length
+        ? this.$store.demoMenu[1].children
+        : [];
+    }
   }
 };
 </script>

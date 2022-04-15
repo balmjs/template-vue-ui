@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import Vue from 'vue';
 import App from '@/views/layouts/app';
 import router from '@/routes';
 import BalmUI from 'balm-ui';
@@ -6,15 +6,19 @@ import $http from '@/plugins/http';
 import myStore from '@/store';
 
 function createMyApp() {
-  const app = createApp(App);
+  Vue.config.productionTip = false;
 
-  app.use(router);
-  app.use(BalmUI, {
+  Vue.use(BalmUI, {
     $store: myStore
   });
-  app.use($http);
+  Vue.use($http);
 
-  app.mount('#app');
+  new Vue({
+    el: '#app',
+    components: { App },
+    template: '<app/>',
+    router
+  });
 }
 
 export default createMyApp;
