@@ -1,7 +1,9 @@
-.page--demo {
-  color: blue;
+.page-demo {
+  .page-about-ui a {
+    color: #6200ee;
+  }
 
-  a {
-    color: blue;
+  .page-about-cli a {
+    color: red;
   }
 }
