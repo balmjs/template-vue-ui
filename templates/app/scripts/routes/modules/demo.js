@@ -1,8 +1,8 @@
 import DemoIndex from '@/views/demo/index';
 import DemoBalmUI from '@/views/demo/balm-ui';
-import DemoBalmUILite from '@/views/demo/balm-ui-lite';
+import DemoBalmCLI from '@/views/demo/balm-cli';
 
-let routes = [
+const demoRoutes = [
   {
     path: '/demo',
     component: DemoIndex,
@@ -18,12 +18,12 @@ let routes = [
         component: DemoBalmUI
       },
       {
-        path: 'balm-ui-lite',
-        name: 'demo.balm-ui-lite',
-        component: DemoBalmUILite
+        path: 'balm-cli',
+        name: 'demo.balm-cli',
+        component: DemoBalmCLI
       }
     ]
   }
 ];
 
-export default routes;
+export default demoRoutes;

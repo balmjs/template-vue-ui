@@ -1,5 +1,5 @@
 <template>
-  <div class="page--demo ui-container">
+  <div class="page-demo">
     <my-menu isSubmenu :items="menu"></my-menu>
     <router-view></router-view>
   </div>

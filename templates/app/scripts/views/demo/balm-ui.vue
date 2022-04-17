@@ -1,5 +1,5 @@
 <template>
-  <div class="page--about-ui">
+  <div class="page-about-ui">
     <h2>
       <a href="//material.balmjs.com/">BalmUI</a>
     </h2>

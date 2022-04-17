@@ -16,8 +16,8 @@ export function getDemoApis(server) {
             url: '/demo/balm-ui'
           },
           {
-            name: 'BalmUI lite',
-            url: '/demo/balm-ui-lite'
+            name: 'BalmCLI',
+            url: '/demo/balm-cli'
           }
         ]
       }

@@ -1,5 +1,5 @@
 <template>
-  <div class="page--home">
+  <div class="page-home">
     <h2>
       <a href="//balm.js.org/">BalmJS</a>
     </h2>
