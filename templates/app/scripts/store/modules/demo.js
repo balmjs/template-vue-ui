@@ -11,8 +11,9 @@ const state = reactive({
 });
 
 async function getDemoMenu() {
-  const url = isDev ? '/mock/menu' : '/menu.json';
-  const { code, data, message } = await $http.get(url);
+  const url = isDev ? '/menu' : '/menu.json';
+  const requestConfig = isDev ? { baseURL: '/mock/api' } : {};
+  const { code, data, message } = await $http.get(url, requestConfig);
 
   if (code === 200) {
     state.demoMenu = data;

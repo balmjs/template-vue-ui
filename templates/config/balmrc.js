@@ -50,6 +50,7 @@ module.exports = {
     ],
     alias: {
       vue$: 'vue/dist/vue.esm-bundler.js',
+      miragejs$: 'miragejs/dist/mirage-esm.js',
       '@mock-server': resolve('mock-server'),
       '@': resolve(`${appRoot}/scripts`)
     }
