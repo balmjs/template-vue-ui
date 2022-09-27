@@ -11,8 +11,10 @@ export default {
   },
   methods: {
     async getDemoMenu() {
-      let url = isDev ? '/mock/menu' : '/menu.json';
-      let response = await this.$http.get(url);
+      const url = isDev ? '/menu' : '/menu.json';
+      const requestConfig = isDev ? { baseURL: '/mock/api' } : {};
+
+      let response = await this.$http.get(url, requestConfig);
       let { code, data, message } = response;
 
       if (code === 200) {

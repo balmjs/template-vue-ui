@@ -50,13 +50,14 @@ module.exports = {
     ],
     alias: {
       vue$: 'vue/dist/vue.esm.js',
+      miragejs$: 'miragejs/dist/mirage-esm.js',
       '@mock-server': resolve('mock-server'),
       '@': resolve(`${appRoot}/scripts`)
     }
   },
   assets: {
-    root: 'assets', // Replace 'assets' to your remote project root
-    mainDir: 'public',
+    // root: 'assets', // Replace 'assets' to your remote project root
+    // mainDir: 'public',
     cache: true
   }
   // More Config
