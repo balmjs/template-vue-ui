@@ -9,7 +9,7 @@ import { balmUIConfig, balmUIPlusConfig } from '@/config/components';
 function createMyApp() {
   Vue.config.productionTip = false;
 
-  app.use(BalmUI, balmUIConfig);
+  Vue.use(BalmUI, balmUIConfig);
   // Vue.use(BalmUIPlus, balmUIPlusConfig);
   Vue.use($http);
 
