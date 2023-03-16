@@ -11,7 +11,7 @@ function createMyApp() {
 
   app.use(router);
   app.use(BalmUI, balmUIConfig);
-  // Vue.use(BalmUIPlus, balmUIPlusConfig);
+  // app.use(BalmUIPlus, balmUIPlusConfig);
   app.use($http);
 
   app.mount('#app');
