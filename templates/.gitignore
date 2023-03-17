@@ -19,6 +19,3 @@ dist/
 
 # MacOS generated files
 .DS_Store
-
-# BalmJS files
-balm.env.js
