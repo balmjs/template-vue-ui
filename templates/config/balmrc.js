@@ -1,14 +1,6 @@
-const path = require('path');
+const { appRoot } = require('./env');
 const { VueLoaderPlugin } = require('vue-loader');
-const webpack = require('webpack');
-
-const workspace = path.join(__dirname, '..');
-
-function resolve(dir) {
-  return path.join(workspace, dir);
-}
-
-const appRoot = 'app';
+const alias = require('./balm.alias');
 
 // Documentation - https://balm.js.org/docs/config/
 // 中文文档 - https://balm.js.org/docs/zh/config/
@@ -40,21 +32,8 @@ module.exports = {
         loader: 'vue-loader'
       }
     ],
-    plugins: [
-      new VueLoaderPlugin(),
-      // feature flags <http://link.vuejs.org/feature-flags>
-      new webpack.DefinePlugin({
-        __VUE_OPTIONS_API__: JSON.stringify(true),
-        __VUE_PROD_DEVTOOLS__: JSON.stringify(false)
-      })
-    ],
-    alias: {
-      vue$: 'vue/dist/vue.esm.js',
-      'balm-ui-plus$': 'balm-ui/dist/balm-ui-plus.js',
-      miragejs$: 'miragejs/dist/mirage-esm.js',
-      '@mock-server': resolve('mock-server'),
-      '@': resolve(`${appRoot}/scripts`)
-    }
+    plugins: [new VueLoaderPlugin()],
+    alias
   },
   assets: {
     // root: 'assets', // Replace 'assets' to your remote project root

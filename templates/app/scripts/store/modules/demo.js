@@ -1,5 +1,6 @@
 import { useAlert } from 'balm-ui';
 import { isDev } from '@/config';
+import { API_ENDPOINT } from '@/plugins/http';
 
 const $alert = useAlert();
 
@@ -12,10 +13,10 @@ export default {
   methods: {
     async getDemoMenu() {
       const url = isDev ? '/menu' : '/menu.json';
-      const requestConfig = isDev ? { baseURL: '/mock/api' } : {};
+      const requestConfig = isDev ? { baseURL: `/mock${API_ENDPOINT}` } : {};
 
-      let response = await this.$http.get(url, requestConfig);
-      let { code, data, message } = response;
+      const response = await this.$http.get(url, requestConfig);
+      const { code, data, message } = response;
 
       if (code === 200) {
         this.demoMenu = data;

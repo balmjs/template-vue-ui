@@ -1,5 +1,5 @@
-import Home from '@/views/home';
-import NotFound from '@/views/not-found';
+import NotFound from '@/layouts/not-found';
+import Home from '@/pages/home';
 import demoRoutes from './demo';
 
 const routes = [

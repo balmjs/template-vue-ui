@@ -1,19 +1,19 @@
 <template>
   <div class="page-demo">
-    <my-menu isSubmenu :items="menu"></my-menu>
+    <demo-menu isSubmenu :items="menu"></demo-menu>
     <router-view></router-view>
   </div>
 </template>
 
 <script>
-import MyMenu from '@/views/components/my-menu';
+import DemoMenu from '@/components/demo/menu';
 
 export default {
   metaInfo: {
     titleTemplate: '%s - UI'
   },
   components: {
-    MyMenu
+    DemoMenu
   },
   computed: {
     menu() {

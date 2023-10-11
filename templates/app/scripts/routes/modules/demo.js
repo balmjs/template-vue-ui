@@ -1,6 +1,6 @@
-import DemoIndex from '@/views/demo/index';
-import DemoBalmUI from '@/views/demo/balm-ui';
-import DemoBalmCLI from '@/views/demo/balm-cli';
+import DemoIndex from '@/pages/demo/index';
+import DemoBalmUI from '@/pages/demo/balm-ui';
+import DemoBalmCLI from '@/pages/demo/balm-cli';
 
 const demoRoutes = [
   {

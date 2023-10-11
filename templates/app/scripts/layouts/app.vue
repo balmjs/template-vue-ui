@@ -2,19 +2,19 @@
   <div class="container">
     <header class="hero">
       <img :src="logo" alt />
-      <hello></hello>
+      <demo-hello></demo-hello>
     </header>
     <hr />
     <div class="content">
-      <my-menu :items="$store.demoMenu"></my-menu>
+      <demo-menu :items="$store.demoMenu"></demo-menu>
       <router-view></router-view>
     </div>
   </div>
 </template>
 
 <script>
-import Hello from '@/views/components/hello';
-import MyMenu from '@/views/components/my-menu';
+import DemoHello from '@/components/demo/hello';
+import DemoMenu from '@/components/demo/menu';
 import logo from '@/assets/logo.png';
 
 export default {
@@ -23,8 +23,8 @@ export default {
     title: 'MyApp'
   },
   components: {
-    Hello,
-    MyMenu
+    DemoHello,
+    DemoMenu
   },
   data() {
     return {

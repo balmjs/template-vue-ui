@@ -1,17 +1,14 @@
 import Vue from 'vue';
-import App from '@/views/layouts/app';
+import App from '@/layouts/app';
 import router from '@/routes';
-import BalmUI from 'balm-ui';
-import BalmUIPlus from 'balm-ui-plus';
-import $http from '@/plugins/http';
-import { balmUIConfig, balmUIPlusConfig } from '@/config/components';
+import useComponents from '@/components';
+import usePlugins from '@/plugins';
 
 function createMyApp() {
   Vue.config.productionTip = false;
 
-  Vue.use(BalmUI, balmUIConfig);
-  Vue.use(BalmUIPlus, balmUIPlusConfig);
-  Vue.use($http);
+  useComponents(Vue);
+  usePlugins(Vue);
 
   new Vue({
     el: '#app',

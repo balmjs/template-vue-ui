@@ -1,6 +1,6 @@
 <template>
-  <nav class="menu-container">
-    <ul :class="['my-menu', { submenu: isSubmenu }]">
+  <nav class="demo-menu-container">
+    <ul :class="['demo-menu', { submenu: isSubmenu }]">
       <li v-for="(item, index) in menu" :key="index">
         <router-link :to="item.url" active-class="active">{{
           item.name
@@ -12,13 +12,11 @@
 
 <script>
 export default {
-  name: 'MyMenu',
+  name: 'DemoMenu',
   props: {
     items: {
       type: Array,
-      default() {
-        return [];
-      }
+      default: () => []
     },
     isSubmenu: {
       type: Boolean,
