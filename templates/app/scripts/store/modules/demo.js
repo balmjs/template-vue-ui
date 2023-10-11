@@ -1,6 +1,6 @@
 import { reactive, toRefs } from 'vue';
 import { useAlert } from 'balm-ui';
-import { useHttp } from '@/plugins/http';
+import { API_ENDPOINT, useHttp } from '@/plugins/http';
 import { isDev } from '@/config';
 
 const $alert = useAlert();
@@ -12,7 +12,7 @@ const state = reactive({
 
 async function getDemoMenu() {
   const url = isDev ? '/menu' : '/menu.json';
-  const requestConfig = isDev ? { baseURL: '/mock/api' } : {};
+  const requestConfig = isDev ? { baseURL: `/mock${API_ENDPOINT}` } : {};
   const { code, data, message } = await $http.get(url, requestConfig);
 
   if (code === 200) {

@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div class="demo-hello">
     <h1>{{ msg }}</h1>
     <p>
       thx
@@ -9,20 +9,17 @@
 </template>
 
 <script>
+export default {
+  name: 'DemoHello'
+};
+</script>
+
+<script setup>
 import { ref } from 'vue';
 
-export default {
-  name: 'Hello',
-  data() {
-    const msg = ref('');
+const msg = ref('');
 
-    msg.value = 'Hello Vue 3.0 App';
-
-    return {
-      msg
-    };
-  }
-};
+msg.value = 'Hello Vue 3.0 App';
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

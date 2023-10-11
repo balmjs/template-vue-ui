@@ -14,8 +14,8 @@ module.exports = {
     es6: true,
     jest: true
   },
-  plugins: ['vue'],
-  extends: ['plugin:vue/vue3-recommended', 'eslint:recommended'],
+  plugins: ['vue', 'prettier'],
+  extends: ['plugin:vue/vue3-recommended', 'prettier'],
   // add your custom rules here
   rules: {
     // allow debugger during development

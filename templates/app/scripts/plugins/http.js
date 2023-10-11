@@ -1,6 +1,7 @@
 import axios from 'axios';
 import { useBus } from 'balm-ui';
-import { API_ENDPOINT } from '@/config';
+
+export const API_ENDPOINT = '/api';
 
 const statusCodes = {
   // Successful
