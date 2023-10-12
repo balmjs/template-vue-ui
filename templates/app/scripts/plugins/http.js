@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { useBus } from 'balm-ui';
 
-export const API_ENDPOINT = '/api';
+export const apiEndpoint = '/api';
 
 const statusCodes = {
   // Successful
@@ -83,7 +83,7 @@ const useHttp = () => axios;
 
 export default {
   install(app) {
-    axios.defaults.baseURL = API_ENDPOINT;
+    axios.defaults.baseURL = apiEndpoint;
     // axios.defaults.withCredentials = true;
 
     app.config.globalProperties.$http = axios;
