@@ -13,7 +13,9 @@ export default {
   methods: {
     async getDemoMenu() {
       const url = isDev ? '/menu' : '/menu.json';
-      const requestConfig = isDev ? { baseURL: `/mock${apiEndpoint}` } : {};
+      const requestConfig = this.$mock
+        ? { baseURL: `/mock${apiEndpoint}` }
+        : {};
 
       const response = await this.$http.get(url, requestConfig);
       const { code, data, message } = response;
