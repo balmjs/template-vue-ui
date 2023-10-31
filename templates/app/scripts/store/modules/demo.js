@@ -12,7 +12,7 @@ const state = reactive({
 
 async function getDemoMenu() {
   const url = isDev ? '/menu' : '/menu.json';
-  const requestConfig = isDev ? { baseURL: `/mock${apiEndpoint}` } : {};
+  const requestConfig = this.$mock ? { baseURL: `/mock${apiEndpoint}` } : {};
   const { code, data, message } = await $http.get(url, requestConfig);
 
   if (code === 200) {

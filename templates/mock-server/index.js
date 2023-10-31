@@ -1,3 +1,4 @@
+import Vue from 'vue';
 import axios from 'axios';
 import useAdapter from 'miragejs-axios-adapter';
 import { createServer } from 'miragejs';
@@ -27,5 +28,7 @@ export function mockServer() {
 }
 
 if (process.env.NODE_ENV === 'development') {
+  Vue.prototype.$mock = true;
+
   mockServer();
 }
