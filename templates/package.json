@@ -21,7 +21,7 @@
   },
   "devDependencies": {
     "@babel/eslint-parser": "^7.23",
-    "@babel/plugin-proposal-optional-chaining": "^7.21.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.21",
     "@babel/runtime-corejs3": "^7.23",
     "@types/jest": "^29.0.0",
     "@vue/compiler-sfc": "^3.4.0",
